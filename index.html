@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduation Invitation</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- BOOT SCREEN -->
+    <!-- ===================================================== -->
+
+    <div id="boot-screen">
+
+        <div class="boot-container">
+
+            <img src="assets/images/logo-ptit.png" alt="PTIT Logo" class="boot-logo">
+
+            <h1>Posts and Telecommunications Institute of Technology</h1>
+
+            <p>Graduation Ceremony</p>
+
+            <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- DESKTOP -->
+    <!-- ===================================================== -->
+
+    <div id="desktop">
+
+        <!-- COUNTDOWN -->
+        <div id="graduation-countdown">
+
+            <div class="countdown-grid">
+                <div class="count-item">
+                    <span id="cd-days">0</span>
+                    <small>Days</small>
+                </div>
+
+                <div class="count-item">
+                    <span id="cd-hours">0</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="count-item">
+                    <span id="cd-minutes">0</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div class="count-item">
+                    <span id="cd-seconds">0</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Icons -->
+
+        <div class="desktop-icons">
+
+            <div class="desktop-icon" ondblclick="openWindow('invitation-window')">
+
+                <img src="assets/icons/grad-cap.svg">
+
+                <span>
+                    Invitation
+                </span>
+
+            </div>
+
+            <div class="desktop-icon" ondblclick="openWindow('photo-window')">
+
+                <img src="assets/icons/photos.svg">
+
+                <span>
+                    Photos
+                </span>
+
+            </div>
+
+            <div class="desktop-icon" ondblclick="openWindow('journey-window')">
+
+                <img src="assets/icons/journey.svg">
+
+                <span>
+                    Journey
+                </span>
+
+            </div>
+
+            <div class="desktop-icon" ondblclick="openWindow('map-window')">
+
+                <img src="assets/icons/map.svg">
+
+                <span>
+                    Map
+                </span>
+
+            </div>
+
+            <div class="desktop-icon" ondblclick="openWindow('messages-window')">
+
+                <img src="assets/icons/message.svg">
+
+                <span>
+                    Messages
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="grad-watermark">Graduation</div>
+
+        <!-- ================================================= -->
+        <!-- INVITATION WINDOW -->
+        <!-- ================================================= -->
+        <div id="invitation-window" class="window">
+            <div class="window-header">
+                <div class="window-title">
+                    🎓 Invitation
+                </div>
+                <div class="window-controls">
+                    <button class="min-btn">—</button>
+                    <button class="max-btn">□</button>
+                    <button class="close-btn" onclick="closeWindow('invitation-window')">
+                        ✕
+                    </button>
+                </div>
+            </div>
+            <div class="window-body">
+
+                <!-- Phần trên: Profile + Thời gian & Địa điểm gọn -->
+                <div class="invitation-header">
+                    <div class="graduate-profile">
+                        <img src="assets/images/mie-2.jpg" class="graduate-avatar">
+                        <div>
+                            <h1>Nguyễn Thị Huyền My</h1>
+                            <h2>Kỹ sư Công nghệ Không tin</h2>
+                            <p style="color: #de2219"><strong>Học viện Công nghệ Bưu chính Viễn thông</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="invitation-details">
+                        <p><strong>🕘</strong> 11:30 16/06/2026</p>
+                        <p><strong>📍</strong> Sân trường - PTIT</p>
+                    </div>
+                </div>
+
+                <!-- Phần nội dung thư mời -->
+                <div class="invitation-content">
+                    <h2>Gửi những người thân yêu,</h2>
+                    <div class="invitation-message">
+                        Mình vừa kết thúc một hành trình dài, đủ để nhiều câu chuyện sinh sôi nảy nở. Chặng đường nào
+                        rồi cũng sẽ đi đến hồi kết tất yếu của nó. Đây có thể là một ngày bình thường, nhưng cũng là một
+                        ngày đáng nhớ. Hy vọng ngày hôm ấy, người vừa vặn xuất hiện. Để chúng ta có thể đứng cạnh nhau, cùng chung một khung hình.
+                        Nhẹ nhàng lưu giữ cột mốc đẹp đẽ này.
+                    </div>
+                    <div class="invitation-footer">
+                        <blockquote>
+                            "Cảm ơn vì đã đồng hành cùng nhau, suốt thời gian qua."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- PHOTO WINDOW -->
+        <!-- ================================================= -->
+
+        <div id="photo-window" class="window">
+            <div class="window-header">
+                <div class="window-title">
+                    📷 Photos
+                </div>
+                <div class="window-controls">
+                    <button class="min-btn">—</button>
+                    <button class="max-btn">□</button>
+                    <button class="close-btn" onclick="closeWindow('photo-window')">
+                        ✕
+                    </button>
+                </div>
+            </div>
+            <div class="window-body" id="special-gallery-wrapper">
+
+                <div id="gallery-spacer">
+
+                    <div id="special-gallery"></div>
+
+                </div>
+
+            </div>
+            <!-- PASSWORD LOCK -->
+            <div id="unlock-overlay" class="unlock-overlay">
+                <div class="unlock-box">
+                    <h3>Premium Photo Gallery</h3>
+                    <p>Hint: nickname + date of birth</p>
+                    <input type="password" id="unlock-password" placeholder="Enter password...">
+                    <button id="unlock-btn">Confirm</button>
+                    <button id="unlock-cancel">Cancel</button>
+                    <div id="unlock-message" class="unlock-message"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================================================= -->
+        <!-- JOURNEY WINDOW -->
+        <!-- ================================================= -->
+
+        <div id="journey-window" class="window">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    📅 Journey
+                </div>
+
+                <div class="window-controls">
+
+                    <button class="min-btn">—</button>
+                    <button class="max-btn">□</button>
+
+                    <button class="close-btn" onclick="closeWindow('journey-window')">
+                        ✕
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="window-body">
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="year">09/2021</div>
+                        <div class="event">
+                            Cắp sách đến trường
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">08/2025</div>
+                        <div class="event">
+                            Lần đầu được quẹt thẻ công ty
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">12/2025</div>
+                        <div class="event">
+                            Được cô Nguyên bảo vệ thành công
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="year">06/2026</div>
+                        <div class="event">
+                            Được trường thả tự do
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================================================= -->
+        <!-- MAP WINDOW -->
+        <!-- ================================================= -->
+
+        <div id="map-window" class="window">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    📍 PTIT Interactive Map
+                </div>
+
+                <div class="window-controls">
+                    <button class="min-btn">—</button>
+                    <button class="max-btn">□</button>
+
+                    <button class="close-btn" onclick="closeWindow('map-window')">
+                        ✕
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="window-body map-window-body">
+
+                <div class="map-container">
+
+                    <!-- SVG MAP -->
+                    <div id="campus-map">
+
+                        <svg x="0" y="0" width="1466" height="825" viewBox="0 0 1466 825" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style="display: block;margin-left: auto;margin-right: auto; background: transparent;">
+                            <defs>
+                                <clipPath id="c_1">
+                                    <path d="M0,0H1466V825H0Z" />
+                                </clipPath>
+                                <clipPath id="c0">
+                                    <path d="M-.2 825.3V-.2H1467V825.3Z" />
+                                </clipPath>
+
+                                <style>
+                                    text {
+                                        white-space: pre;
+                                    }
+
+                                    image {
+                                        pointer-events: none;
+                                    }
+
+                                    path {
+                                        pointer-events: auto;
+                                    }
+
+                                    /* Định dạng chữ tối để nổi bật trên nền sáng */
+                                    .s0 {
+                                        font-size: 18.32px;
+                                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                                        font-weight: bold;
+                                        fill: #2C3E50;
+                                    }
+
+                                    .s1 {
+                                        font-size: 27.50px;
+                                        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                                        font-weight: bold;
+                                        fill: #2C3E50;
+                                    }
+
+                                    .g1 {
+                                        fill: #D4AF37;
+                                    }
+
+                                    /* HỘI TRƯỜNG A: Vàng Gold hoàng gia, nổi bật nhất */
+                                    .g6 {
+                                        fill: #00A896;
+                                    }
+
+                                    /* BÃI ĐỖ XE P: Xanh Teal tươi, rất dễ định vị */
+
+                                    .g4 {
+                                        fill: #E2E8F0;
+                                    }
+
+                                    /* CÁC DÃY NHÀ HỌC (A,B,D,E): Xám xanh nhạt, tinh tế */
+                                    .g5 {
+                                        fill: #F3D9D9;
+                                    }
+
+                                    /* KHU KTX: Tông hồng đất/cam nhạt phân biệt rõ rệt */
+
+                                    .g2 {
+                                        fill: #4A5568;
+                                    }
+
+                                    /* Hệ thống đường đi: Xám than hiện đại */
+                                    .g3 {
+                                        fill: #F5C6A5;
+                                    }
+
+                                    /* CỔNG CHÀO: Đổi sang màu Cam sữa/Cát nhạt sáng sủa để làm nổi bật chữ đen */
+
+                                    /* MŨI TÊN CHỈ ĐƯỜNG: Đồng bộ sang màu Xanh Navy đậm (.g7 và .g8) vừa trang trọng vừa định hướng rõ */
+                                    .g7 {
+                                        fill: none;
+                                        stroke: #1A365D;
+                                        stroke-width: 4.59;
+                                        stroke-miterlimit: 10;
+                                        stroke-dasharray: 19, 14;
+                                    }
+
+                                    .g8 {
+                                        fill: #1A365D;
+                                    }
+                                </style>
+
+                            </defs>
+
+                            <g clip-path="url(#c_1)">
+                                <path fill-rule="evenodd"
+                                    d="M1063.9 272.6l-45.8-.5l1.1-92.9l91.6 1.1l-1.1 92.8l-45.8-.5Z" class="g1"
+                                    id="hoi-truong-a" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 0.01 -0.01 1 1049.9 211.3)" class="s0">Hội </text>
+                                    <text transform="matrix(1 0.01 -0.01 1 1033.4 233.2)" class="s0">trường </text>
+                                    <text transform="matrix(1 0.01 -0.01 1 1057.5 255.5)" class="s0">A </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M277.7 155l-.1-6.2l880-15l.2 12.2L277.9 161.1l-.2-6.1Z"
+                                    class="g2" />
+                                <path fill-rule="evenodd" d="M293.3 672.4l-7 .1l-8.5-512l13.8-.3l8.6 512.1l-6.9 .1Z"
+                                    class="g2" />
+                                <path fill-rule="evenodd" d="M864.4 673.3l-5.5-4l332-461.6l11.1 8L870 677.3l-5.6-4Z"
+                                    class="g2" />
+                                <path fill-rule="evenodd"
+                                    d="M1192.2 221.2l-5.7 2.4l-37.3-86.3l11.4-4.9l37.2 86.3l-5.6 2.5Z" class="g2" />
+                                <path fill-rule="evenodd"
+                                    d="M993.8 492.3l-12.9-9.4l58.5-79.5l25.6 18.8l-58.4 79.5l-12.8-9.4Z" class="g3" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(0.59 -0.81 0.81 0.59 1015 475.8)" class="s0">Cổng </text>
+                                </g>
+                                <path fill-rule="evenodd"
+                                    d="M837.4 463.5L816 447.8L923.1 302.2l42.7 31.4L858.7 479.2l-21.3-15.7Z"
+                                    class="g4 building" id="day-a" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(0.59 -0.8 0.8 0.59 885.6 405.7)" dx="0 0 0 0 -.6"
+                                        class="s0">A</text>
+                                </g>
+                                <path fill-rule="evenodd" d="M827.3 480l-31.2 .5l-1.4-88.3l62.6-1l1.3 88.3l-31.3 .5Z"
+                                    class="g4 building" id="day-a1" />
+                                <path fill-rule="evenodd"
+                                    d="M924.6 360.1l-21.7 .3l-1.7-110.7l43.6-.7l1.6 110.8l-21.8 .3Z" class="g4 building"
+                                    id="day-b1" />
+                                <path fill-rule="evenodd" d="M767.9 327.9l.1-17.3l152.3 .4l-.1 34.7l-152.3-.4V327.9Z"
+                                    class="g4 building" id="day-b2" />
+                                <path fill-rule="evenodd" d="M757.3 269l.1-20.2l151.8 .4l-.1 40.5l-151.9-.4l.1-20.3Z"
+                                    class="g4 building" id="day-b" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 0 0 1 830.2 278.3)" dx="0 0 0 0 .1" class="s0">B
+                                    </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M592.5 462.6V445.2l208.8 .6l-.1 34.7l-208.8-.6l.1-17.3Z"
+                                    class="g4 building" id="day-d" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 0 0 1 692 468)" dx="0 0 0 0 .1" class="s0">D
+                                    </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M563.6 519.6l-29.2-.1l.2-74.5l58.2 .2l-.1 74.4H563.6Z"
+                                    class="g4 building" id="day-d1" />
+                                <path fill-rule="evenodd" d="M604.7 542.1l.1-17.4l203.7 .6l-.1 34.7l-203.7-.6V542.1Z"
+                                    class="g4 building" id="day-e" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 0 0 1 702 548)" dx="0 0 0 0 .1" class="s0">E
+                                    </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M302.5 301.1V283.7l189.9-1l.2 34.7l-189.9 1l-.2-17.3Z"
+                                    class="g5 building" id="ktx1" />
+                                <path fill-rule="evenodd" d="M475.4 467.9l-19.9 .3l-2.8-184.1l40-.6l2.7 184.1l-20 .3Z"
+                                    class="g5 building" id="ktx" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(-0.01 -1 1 -0.01 481.7 394.1)" class="s0">K </text>
+                                    <text transform="matrix(-0.01 -1 1 -0.01 481.5 380.9)" class="s0">T </text>
+                                    <text transform="matrix(-0.01 -1 1 -0.01 481.3 369.7)" class="s0">X </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M481.5 542.2l-15 .2l-1-65.8l30.1-.4l1 65.7l-15.1 .3Z"
+                                    class="g5 building" id="ktx2" />
+                                <path fill-rule="evenodd" d="M482.4 607l-15.1 .2l-.8-54.2l30.1-.4l.8 54.1l-15 .3Z"
+                                    class="g5 building" id="ktx3" />
+                                <path fill-rule="evenodd" d="M399.5 471.8l.1-16.3l57.5 .1l-.1 32.8l-57.5-.2V471.8Z"
+                                    class="g5 building" id="ktx4" />
+                                <path fill-rule="evenodd" d="M345.2 471.8l.1-16.6l45 .3l-.1 33l-45-.2V471.8Z"
+                                    class="g5 building" id="ktx5" />
+                                <path fill-rule="evenodd" d="M322.5 648l-15.1 .2l-3-192.7l30.1-.5l3 192.7l-15 .3Z"
+                                    class="g5 building" id="ktx6" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(-0.02 -1 1 -0.02 328.6 569.8)" class="s0">K </text>
+                                    <text transform="matrix(-0.02 -1 1 -0.02 328.4 556.6)" class="s0">TX </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M348.7 633.1V618l150.1-.1V648l-150.1 .1v-15Z"
+                                    class="g5 building" id="ktx7" />
+                                <path fill-rule="evenodd"
+                                    d="M301.6 235.2l-.2-17.4l190.3-3.2l.6 34.7l-190.4 3.2l-.3-17.3Z" class="g5 building"
+                                    id="ktx8" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 -0.02 0.02 1 378.5 241.3)" class="s0">KTX </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M795.5 641l-14-10.3l50-68l28 20.6l-50 68l-14-10.3Z"
+                                    class="g5 building" id="ktx9" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(0.59 -0.8 0.8 0.59 815.5 626.1)" dx="0 0 .1" class="s0">KTX
+                                    </text>
+                                </g>
+                                <path fill-rule="evenodd" d="M286.6 671.6v-6.3l582.6-.2v12.7L286.6 678v-6.4Z"
+                                    class="g2" />
+                                <path fill-rule="evenodd" d="M914 222.9l-30.1 .4l-.8-48.5l60.4-.9l.7 48.5l-30.2 .5Z"
+                                    class="g6 building" id="parking" />
+                                <g clip-path="url(#c0)">
+                                    <text transform="matrix(1 -0.01 0.01 1 904.6 209.7)" class="s1">P </text>
+                                </g>
+                                <path d="M1010.2 443.1H977.1V198.2H956.8" class="g7" />
+                                <path fill-rule="evenodd" d="M943.9 198.2l13.8-6.9v13.8l-13.8-6.9Z" class="g8" />
+
+                            </g>
+                        </svg>
+
+
+                    </div>
+
+                </div>
+
+                <div id="map-info-panel">
+
+                    <!-- THÔNG TIN ĐỘNG -->
+                    <div id="building-info">
+
+
+                    </div>
+
+                    <!-- THÔNG TIN CỐ ĐỊNH -->
+                    <div id="map-static-info">
+
+                        <h4>🅿️ Hướng dẫn giữ xe</h4>
+                        <ul>
+                            <li>Chạy theo mũi tên để vào chỗ gửi xe.</li>
+                            <li>Không cần khóa xe và ghi nhớ vị trí.</li>
+                        </ul>
+
+                        <h4>📌 Lưu ý quan trọng</h4>
+                        <ul>
+                            <li>Đến sớm để tránh đông đúc.</li>
+                            <li>Chuẩn bị tiền lẻ để gửi xe.</li>
+                        </ul>
+
+                        <div style="margin-top:20px;text-align:center;">
+                            <button onclick="openGoogleMaps()" class="map-google-btn">
+                                Google Maps - PTIT
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================================================= -->
+        <!-- MESSAGES WINDOW -->
+        <!-- ================================================= -->
+
+        <div id="messages-window" class="window">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    💌 Messages
+                </div>
+
+                <div class="window-controls">
+
+                    <button class="min-btn">—</button>
+                    <button class="max-btn">□</button>
+
+                    <button class="close-btn" onclick="closeWindow('messages-window')">
+                        ✕
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="window-body">
+
+                <div class="message-login">
+
+                    <h2>A Message For You</h2>
+
+                    <p>
+                        Thank you for being part of my journey.
+                    </p>
+
+                    <div class="password-hint">
+                        Hint: Password is your name followed </br> 
+                        by your date of birth (e.g. huyenmy12122003).
+                    </div>
+
+                    <input type="password" id="message-password" placeholder="Enter your password...">
+
+                    <button id="message-submit">
+                        Read My Message
+                    </button>
+
+                    <div id="message-status" class="message-status"></div>
+
+                </div>
+
+                <div id="message-result" class="message-result">
+
+                    <div class="message-card">
+
+                        <h3 id="receiver-name"></h3>
+
+                        <div id="receiver-message"></div>
+
+                        <div id="signature" class="letter-signature">
+                            Huyền My
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tooltip -->
+        <div id="map-tooltip"></div>
+
+        <!-- ================================================= -->
+        <!-- START MENU -->
+        <!-- ================================================= -->
+
+        <div id="start-menu">
+
+            <div class="start-profile">
+
+                <img src="assets/images/logo-ptit.png">
+
+                <h3>
+                    PTIT
+                </h3>
+
+            </div>
+
+            <div class="start-apps">
+
+                <button onclick="openWindow('invitation-window')" class="taskbar-app">
+                    <img src="assets/icons/grad-cap.svg" alt="Graduation">
+                </button>
+
+                <button onclick="openWindow('photo-window')" class="taskbar-app">
+                    <img src="assets/icons/photos.svg" alt="Photos">
+                </button>
+
+                <button onclick="openWindow('journey-window')" class="taskbar-app">
+                    <img src="assets/icons/journey.svg" alt="Journey">
+                </button>
+
+                <button onclick="openWindow('map-window')" class="taskbar-app">
+                    <img src="assets/icons/map.svg" alt="Map">
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================================================= -->
+        <!-- ACHIEVEMENT POPUP -->
+        <!-- ================================================= -->
+
+        <div id="achievement-popup">
+
+            <div class="achievement-title">
+
+                🏆 Achievement Unlocked
+
+            </div>
+
+            <div class="achievement-text">
+
+                Bachelor of Engineering in </br> Information Technology
+
+            </div>
+
+        </div>
+
+        <!-- ================================================= -->
+        <!-- TASKBAR -->
+        <!-- ================================================= -->
+
+        <div class="taskbar">
+
+            <!-- Trong phần .taskbar-center -->
+            <div class="taskbar-center">
+                <button id="start-button">
+                    <img src="assets/images/logo-ptit.png">
+                </button>
+
+                <button class="taskbar-app" data-window="invitation-window">
+                    <img src="assets/icons/grad-cap.svg" alt="Graduation">
+                </button>
+
+                <button class="taskbar-app" data-window="photo-window">
+                    <img src="assets/icons/photos.svg" alt="Photos">
+                </button>
+
+                <button class="taskbar-app" data-window="journey-window">
+                    <img src="assets/icons/journey.svg" alt="Journey">
+                </button>
+
+                <button class="taskbar-app" data-window="map-window">
+                    <img src="assets/icons/map.svg" alt="Map">
+                </button>
+
+                <button class="taskbar-app" data-window="messages-window">
+                    <img src="assets/icons/message.svg" alt="Messages">
+                </button>
+            </div>
+
+            <div id="clock">
+                00:00
+            </div>
+
+        </div>
+
+        <!-- LIGHTBOX / FULL IMAGE VIEW -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-overlay"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close">✕</button>
+                <img id="lightbox-image" src="" alt="Graduation Photo">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
